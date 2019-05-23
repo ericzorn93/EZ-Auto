@@ -1,5 +1,5 @@
 {
-  "name": "EZ-Auto",
+  "name": "ez-auto",
   "version": "1.0.0",
   "description": "A car finding API with Express",
   "main": "server.js",
@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "start": "node server.js",
-    "dev": "nodemon server.js"
+    "start:dev": "nodemon server.js"
   },
   "dependencies": {
     "cors": "^2.8.5",
