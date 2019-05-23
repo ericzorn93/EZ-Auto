@@ -7,11 +7,9 @@ require("isomorphic-fetch");
  *
  */
 const fetchMercedes = async () => {
-  const c300W4FirstUrl =
-    "https://www.mbusa.com/mercedes/json/cpo/inventory/vehicles/search?model=C300W4&count=4&start=0&sortBy=distance&zip=07675&distance=50&minYear=2016&maxYear=2018&minPrice=3000&maxPrice=35000&minMileage=0&maxMileage=12000&callSeq=5&_=1558577407901";
+  const c300W4FirstUrl = process.env.C300W4_FIRST_URL;
 
-  const cla250FirstUrl =
-    "https://www.mbusa.com/mercedes/json/cpo/inventory/vehicles/search?model=CLA250C4&count=4&start=0&sortBy=distance&zip=07675&distance=50&minYear=2016&maxYear=2018&minPrice=3000&maxPrice=35000&minMileage=0&maxMileage=12000&callSeq=5&_=1558577407900";
+  const cla250FirstUrl = process.env.CLA250_FIRST_URL;
 
   try {
     // First Data
@@ -29,10 +27,8 @@ const fetchMercedes = async () => {
     );
 
     // Second Data
-    const c300SecondUrl =
-      "https://www.mbusa.com/mercedes/json/cpo/inventory/vehicles/search?model=C300W4&count=4&start=0&sortBy=distance&zip=07675&distance=10&minYear=2016&maxYear=2018&minPrice=3000&maxPrice=35000&minMileage=0&maxMileage=12000&callSeq=4&_=1558577407898";
-    const cla250SecondUrl =
-      "https://www.mbusa.com/mercedes/json/cpo/inventory/vehicles/search?model=CLA250C4&count=4&start=0&sortBy=distance&zip=07675&distance=10&minYear=2016&maxYear=2018&minPrice=3000&maxPrice=35000&minMileage=0&maxMileage=12000&callSeq=4&_=1558577407897";
+    const c300SecondUrl = process.env.C300W4_SECOND_URL;
+    const cla250SecondUrl = process.env.CLA250_SECOND_URL;
 
     const c300SecondResponse = await fetch(c300SecondUrl);
     const cla250SecondResponse = await fetch(cla250SecondUrl);
