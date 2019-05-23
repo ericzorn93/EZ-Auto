@@ -1,0 +1,21 @@
+{
+  "name": "EZ-Car",
+  "version": "1.0.0",
+  "description": "A car finding API with Express",
+  "main": "server.js",
+  "author": "Eric Zorn",
+  "license": "MIT",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.0",
+    "express-handlebars": "^3.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.0"
+  }
+}
