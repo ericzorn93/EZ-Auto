@@ -1,5 +1,5 @@
 {
-  "name": "EZ-Car",
+  "name": "EZ-Auto",
   "version": "1.0.0",
   "description": "A car finding API with Express",
   "main": "server.js",
