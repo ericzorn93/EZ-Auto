@@ -4,6 +4,7 @@ const app = express();
 const exphbs = require("express-handlebars");
 const cors = require("cors");
 
+const primary = require("./src/api/primary");
 const cars = require("./src/api/cars");
 
 /**
@@ -18,6 +19,7 @@ function initServer() {
   const apiPrefix = "/api/v1";
 
   // Routes
+  app.use("/", primary);
   app.use(apiPrefix, cars);
 
   // Server Listening
