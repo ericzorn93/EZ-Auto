@@ -6,8 +6,7 @@ require("isomorphic-fetch");
  * Fetches all interested BMW models and returns the array of the desired models
  */
 const fetchBmw = async () => {
-  const bmwUrl =
-    "https://bmw-inventory-service-prod.azurewebsites.net/api/search";
+  const bmwUrl = process.env.BMW_FIRST_URL;
 
   try {
     const bmwPostData = JSON.stringify({
@@ -19,7 +18,7 @@ const fetchBmw = async () => {
       SortDirection: "",
       Filters: {
         CPOType: ["BMW Certified"],
-        Series: ["3 Series"],
+        Series: ["3 Series, 4 Series"],
         Year: ["2017"],
         Mileage: ["20,000 or less"],
         Price: ["$20,000 - $29,999", "$30,000 - $39,999"]

@@ -1,4 +1,4 @@
-# EZ-AUTO
+# EZ-AUTO - by Eric Zorn
 
 ---
 

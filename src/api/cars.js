@@ -1,8 +1,8 @@
 const express = require("express");
 const router = express.Router();
 
-const fetchMercedes = require("../helpers/functions/fetchMercedes");
-const fetchBmw = require("../helpers/functions/fetchBmw");
+const fetchMercedes = require("../utils/functions/fetchMercedes");
+const fetchBmw = require("../utils/functions/fetchBmw");
 
 router.get("/all-cars", async (req, res) => {
   const mercedes = await fetchMercedes();
