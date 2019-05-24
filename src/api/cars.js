@@ -3,6 +3,7 @@ const router = express.Router();
 
 const fetchMercedes = require("../utils/functions/fetchMercedes");
 const fetchBmw = require("../utils/functions/fetchBmw");
+const fetchLexus = require("../utils/functions/fetchLexus");
 
 /**
  * @description
@@ -11,10 +12,12 @@ const fetchBmw = require("../utils/functions/fetchBmw");
 router.get("/all-cars", async (req, res) => {
   const mercedes = await fetchMercedes();
   const bmw = await fetchBmw();
+  const lexus = await fetchLexus();
 
   const finalCars = {
     mercedesBenz: mercedes,
-    bmw
+    bmw,
+    lexus
   };
   return res.json(finalCars);
 });
