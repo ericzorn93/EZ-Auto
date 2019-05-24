@@ -4,6 +4,7 @@ const router = express.Router();
 const fetchMercedes = require("../utils/functions/fetchMercedes");
 const fetchBmw = require("../utils/functions/fetchBmw");
 const fetchLexus = require("../utils/functions/fetchLexus");
+const fetchAudi = require("../utils/functions/fetchAudi");
 
 /**
  * @description
@@ -13,11 +14,13 @@ router.get("/all-cars", async (req, res) => {
   const mercedes = await fetchMercedes();
   const bmw = await fetchBmw();
   const lexus = await fetchLexus();
+  const audi = await fetchAudi();
 
   const finalCars = {
     mercedesBenz: mercedes,
     bmw,
-    lexus
+    lexus,
+    audi
   };
   return res.json(finalCars);
 });
@@ -50,6 +53,16 @@ router.get("/lexus", async (req, res) => {
   const lexus = await fetchLexus();
 
   return res.status(200).json({ ...lexus });
+});
+
+/**
+ * @returns
+ * ONLY Audi Vehichles
+ */
+router.get("/audi", async (req, res) => {
+  const audi = await fetchAudi();
+
+  return res.status(200).json({ ...audi });
 });
 
 module.exports = router;
