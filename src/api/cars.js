@@ -22,4 +22,34 @@ router.get("/all-cars", async (req, res) => {
   return res.json(finalCars);
 });
 
+/**
+ * @returns
+ * ONLY Mercedes Benz Vehichles
+ */
+router.get("/mercedezBenz", async (req, res) => {
+  const mercedesBenz = await fetchMercedes();
+
+  return res.status(200).json({ ...mercedesBenz });
+});
+
+/**
+ * @returns
+ * ONLY BMW Vehichles
+ */
+router.get("/bmw", async (req, res) => {
+  const bmw = await fetchBmw();
+
+  return res.status(200).json({ ...bmw });
+});
+
+/**
+ * @returns
+ * ONLY Lexus Vehichles
+ */
+router.get("/lexus", async (req, res) => {
+  const lexus = await fetchLexus();
+
+  return res.status(200).json({ ...lexus });
+});
+
 module.exports = router;
