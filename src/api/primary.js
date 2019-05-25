@@ -14,7 +14,8 @@ router.get("/", (req, res) => {
       mercedesBenz: `${globalApiPrefix}/mercedesBenz`,
       bmw: `${globalApiPrefix}/bmw`,
       audi: `${globalApiPrefix}/audi`,
-      lexus: `${globalApiPrefix}/lexus`
+      lexus: `${globalApiPrefix}/lexus`,
+      acura: `${globalApiPrefix}/acura`
     }
   };
 
