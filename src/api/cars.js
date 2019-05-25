@@ -1,11 +1,11 @@
 const express = require("express");
 const router = express.Router();
 
-const fetchMercedes = require("../utils/functions/fetchMercedes");
-const fetchBmw = require("../utils/functions/fetchBmw");
-const fetchLexus = require("../utils/functions/fetchLexus");
-const fetchAudi = require("../utils/functions/fetchAudi");
-const fetchAcura = require("../utils/functions/fetchAcura");
+const fetchMercedes = require("../utils/services/fetchMercedes");
+const fetchBmw = require("../utils/services/fetchBmw");
+const fetchLexus = require("../utils/services/fetchLexus");
+const fetchAudi = require("../utils/services/fetchAudi");
+const fetchAcura = require("../utils/services/fetchAcura");
 
 /** @description Redirects to the root page */
 router.get("/", (req, res) => res.redirect("/"));

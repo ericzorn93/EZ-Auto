@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-const { globalApiPrefix } = require("../utils/constants/contants.api");
+const { globalApiPrefix } = require("../utils/constants/constants.api");
 
 router.get("/", (req, res) => {
   const greetingMessage = {

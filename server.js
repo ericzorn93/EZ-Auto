@@ -16,11 +16,9 @@ function initServer() {
   app.set("view engine", "handlebars");
   app.use(cors());
 
-  const apiPrefix = "/api/v1";
-
   // Routes
   app.use("/", primary);
-  app.use(apiPrefix, cars);
+  app.use(`/${process.env.API_VERSION}`, cars);
 
   // Server Listening
   const PORT = process.env.PORT || 4000;
