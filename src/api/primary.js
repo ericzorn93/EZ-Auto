@@ -6,7 +6,7 @@ const { globalApiPrefix } = require("../utils/constants/constants.api");
 router.get("/", (req, res) => {
   const greetingMessage = {
     name: "EZ-Auto",
-    apiVersion: "1.0.0",
+    apiVersion: "1.0.1",
     author: "Eric Zorn",
     message:
       "This API enables the user to find the car of their choice. It aggregates the data from each manufacturer and returns the data as requested.",
