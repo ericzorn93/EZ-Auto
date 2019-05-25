@@ -1,6 +1,6 @@
 {
   "name": "ez-auto",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A car finding API with Express",
   "main": "server.js",
   "author": "Eric Zorn",
