@@ -11,6 +11,7 @@ router.get("/", (req, res) => {
     message:
       "This API enables the user to find the car of their choice. It aggregates the data from each manufacturer and returns the data as requested.",
     routes: {
+      primaryApi: `${globalApiPrefix}/`,
       mercedesBenz: `${globalApiPrefix}/mercedesBenz`,
       bmw: `${globalApiPrefix}/bmw`,
       audi: `${globalApiPrefix}/audi`,
