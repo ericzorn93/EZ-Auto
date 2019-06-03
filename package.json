@@ -6,8 +6,10 @@
   "author": "Eric Zorn",
   "license": "MIT",
   "scripts": {
-    "start": "node server.js",
-    "start:dev": "nodemon server.js"
+    "start": "next start",
+    "start:dev": "next",
+    "start:server:dev": "nodemon server.js",
+    "build": "next build"
   },
   "dependencies": {
     "cors": "^2.8.5",
@@ -15,7 +17,11 @@
     "es6-promise": "^4.2.6",
     "express": "^4.17.0",
     "express-handlebars": "^3.1.0",
-    "isomorphic-fetch": "^2.2.1"
+    "isomorphic-fetch": "^2.2.1",
+    "next": "^8.1.0",
+    "next-routes": "^1.4.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
   },
   "devDependencies": {
     "nodemon": "^1.19.0"
